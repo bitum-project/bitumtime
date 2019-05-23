@@ -1,0 +1,14 @@
+language: go
+go:
+  - 1.11.x
+sudo: false
+install:
+  - go get -v github.com/golangci/golangci-lint/cmd/golangci-lint
+script:
+  - export GO111MODULE=on
+  - (cd cmd/bitumtime && go build)
+  - (cd cmd/bitumtime_dumpdb && go build)
+  - (cd cmd/bitumtime_timestamp && go build)
+  - (cd cmd/bitumtime_unflush && go build)
+  - (cd bitumtimed && go build)
+  - ./goclean.sh

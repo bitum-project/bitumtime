@@ -1,0 +1,9 @@
+cmd/bitumtime/bitumtime
+cmd/bitumtime_timestamp/bitumtime_timestamp
+bitumtimed/bitumtimed
+vendor/
+*~
+*.pyc
+*.sw?
+*.orig
+*.diff
